@@ -1,0 +1,33 @@
+# Ignore bundle config
+/.bundle
+
+# Ignore all the logfiles and tempfiles
+/log/*.log
+/tmp
+!/log/.keep
+
+# Ignore RubyMine
+/.idea
+
+# Ignore byebug files
+.byebug*
+
+# Ignore coverage stats
+/coverage
+
+# Ignore test reports
+/reports
+
+# Ignore any development uploads
+/public/uploads
+/public/assets
+
+.DS_Store
+public/system
+dump.rdb
+public/test
+
+/config/application.yml
+
+# Ignore passwords
+/config/passwords.rb
