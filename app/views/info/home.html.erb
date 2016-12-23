@@ -1,0 +1,268 @@
+<!-- Header hero image -->
+<div class="hero" style="background-image: url(<%= asset_path('welding.jpg') %>);" >
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-7">
+        <h3>Custom Motorcycles</h3>
+        <p>A one stop shop. From fabrication to paint to general maintenance.</p>
+        <%= link_to "Contact Us", "#contact", class: "btn btn-default btn-lg" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Us -->
+<a name="about"></a> 
+<div class="dark-blue">
+  <div class="blue-circle wheel">
+    <h5>About</h5>
+    <%= image_tag "line_art/wheel.png" %>
+  </div>
+  <div class="container">
+    <div class="row mobile-center">
+      <div class="col-md-5">
+        <h4>Years of Chopper Experience</h4>
+        <p>We eat, breath, and sleep motorcycles. Carter Customs' founder, Chad Carter, can't remember a time when bikes were not his passion. Now, he has transformed his shop into the ultimate work space. Whatever dreams you've got for your ride, Carter Customs will work to make it a reality.</p>
+        <%= image_tag "line_art/lines.png", class: "line-image-wide" %>
+      </div>
+      <div class="col-md-7">
+        <%= image_tag "line_art/motorcycle_sketch.png", style: "width: 100%; opacity: 0.1" %>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- Instagram Feed -->
+<a name="gallery"></a>
+<div class="instagram">
+  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta1.jpg') %>)">
+    <%= image_tag "instagram/Insta1.jpg" %>
+  </div>
+  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta2.jpg') %>)">
+    <%= image_tag "instagram/Insta1.jpg" %>
+  </div>
+  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta3.jpg') %>)">
+    <%= image_tag "instagram/Insta1.jpg" %>
+  </div>
+  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta4.jpg') %>)">
+    <%= image_tag "instagram/Insta1.jpg" %>
+  </div>
+  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta5.jpg') %>)">
+    <%= image_tag "instagram/Insta1.jpg" %>
+  </div>
+  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta6.jpg') %>)">
+    <%= image_tag "instagram/Insta1.jpg" %>
+  </div>
+  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta7.jpg') %>)">
+    <%= image_tag "instagram/Insta1.jpg" %>
+  </div>
+  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta8.jpg') %>)">
+    <%= image_tag "instagram/Insta1.jpg" %>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+<!-- Services -->
+<a name="services"></a> 
+<div class="dark-blue">
+  <div class="blue-circle wheel">
+    <h5>Services</h5>
+    <%= image_tag "line_art/wheel.png" %>
+  </div>
+  <div class="container">
+    <div class="row centered">
+      <div class="col-md-4">
+        <%= image_tag "services/ink.png", alt: "Custom Ink", class: "service-img" %>
+        <h4>Custom Paint</h4>
+        <p>We use various techniques such as airbrushing, pinstriping, and graphics to create the perfect work of art just for you.</p>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag "services/stuff.png", alt: "Tools", class: "service-img" %>
+        <h4>Mechanical Work</h4>
+        <p>Need repair, restoration, or installation? We can do it all to get your ride up and running like new, probably even better.</p>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag "services/welding.png", alt: "Mechanical", class: "service-img" %>
+        <h4>Fabrication</h4>
+        <p>For those tough projects we can build the custom motorcycle components you need to get the job done.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slideshow -->
+<div class="dark-blue">
+  <div id="carousel-slides" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-slides" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-slides" data-slide-to="1"></li>
+      <li data-target="#carousel-slides" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <%= image_tag "slideshow/slide1.jpg", alt: "the shop" %>
+        <!-- div class="carousel-caption">
+          Working at the shop
+        </div -->
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide2.jpg", alt: "the shop" %>
+        <!-- div class="carousel-caption">
+          Working at the shop
+        </div -->
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide3.jpg", alt: "the shop" %>
+        <!-- div class="carousel-caption">
+          Working at the shop
+        </div -->
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide4.jpg", alt: "the shop" %>
+        <!-- div class="carousel-caption">
+          Working at the shop
+        </div -->
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide5.jpg", alt: "the shop" %>
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide6.jpg", alt: "the shop" %>
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide7.jpg", alt: "the shop" %>
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide8.jpg", alt: "the shop" %>
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide9.jpg", alt: "the shop" %>
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide10.jpg", alt: "the shop" %>
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide11.jpg", alt: "the shop" %>
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide12.jpg", alt: "the shop" %>
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide13.jpg", alt: "the shop" %>
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide14.jpg", alt: "the shop" %>
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide15.jpg", alt: "the shop" %>
+      </div>
+       <div class="item">
+        <%= image_tag "slideshow/slide16.jpg", alt: "the shop" %>
+      </div>
+      <div class="item">
+        <%= image_tag "slideshow/slide17.jpg", alt: "the shop" %>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-slides" role="button" data-slide="prev">
+      <span aria-hidden="true"><%= image_tag "line_art/left-arrow.png", style: "width: 30px; position: relative; top: 50%; right: 20%; transform: translateY(-50%);" %></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-slides" role="button" data-slide="next">
+      <span aria-hidden="true"><%= image_tag "line_art/right-arrow.png", style: "width: 30px; position: relative; top: 50%; left: 20%; transform: translateY(-50%);" %></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Store -->
+<a name="store"></a> 
+<div class="dark-blue">
+  <div class="blue-circle wheel">
+    <h5>Store</h5>
+    <%= image_tag "line_art/wheel.png" %>
+  </div>
+  <div class="container">
+    <div class="row centered">
+      <div class="col-md-4">
+        <h4>Carter Custom Swag</h4>
+        <p>Grab a ball cap or a shot glass, something to remember your time with us.</p>
+        <%= image_tag "line_art/lines.png", class: "line-image-wide" %>
+      </div>
+      <% if @products.empty? %>
+        <div class="col-md-8">
+          <p>No Products available for sale</p>
+        </div>
+      <% else %>
+        <% @products.each do |product| %>
+          <div class="col-xs-6 col-sm-4 col-md-2">
+            <%= link_to spree.product_path(product) do %>
+              <% if !product.images.empty? %>
+                <%= image_tag product.images.first.attachment.url(:product), class: "shop-img" %>
+              <% else %>
+                <%= image_tag "no-image.jpg", class: "shop-img" %>
+              <% end %>
+            <% end %>
+            <p style="font-weight: 700; line-height: 1.2em"><%= link_to spree.product_path(product) do %><%= product.name %><% end %></p>
+            <p><%= number_to_currency(product.price) %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+<a name="contact"></a> 
+<div class="contact" style="background-image: url(<%= asset_path('backgrounds/shop.jpg') %>)">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h4>Contact Form</h4>
+        <%= form_for @contact, :url => "/contact" do |f| %>
+          <%= f.text_field(:first_name, placeholder: "First Name (required)", :required => true, class: "form-control") %>
+
+            <%= f.text_field(:last_name, placeholder: "Last Name", class: "form-control") %>
+      
+            <%= f.text_field(:email, placeholder: "Email (required)", :required => true, class: "form-control") %>
+       
+            <%= f.text_field(:phone, placeholder: "Phone", class: "form-control") %>
+       
+            <%= f.text_field(:subject, placeholder: "Subject (required)", :required => true, class: "form-control", style: "width: 100%") %>
+
+            <div class="clearfix"></div>
+          
+            <%= f.text_area(:message, placeholder: "Message", size: "24x6", class: "form-control") %>
+
+            <%= f.submit(class: "btn btn-default btn-sm", style: "margin-left: auto; margin-right: auto; width: 200px; float: none; left: 0; right: 0") %>
+        <% end %>
+      </div>
+      <div class="col-md-4">
+        <h4>Contact Us</h4>
+        <p>There’s always something happening at the shop. Get in touch or come through to check it out.</p>
+        <p>
+          Shop Hours<br>
+          Monday - Friday 8:00 am - 5:00 pm
+        </p>
+        <p>
+          Address<br>
+          871 East Lambert Road Unit C<br>La Habra, CA 90631
+        </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5665.105023925774!2d-117.93979264979771!3d33.92509808870084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd2aa4ca146afd%3A0xb1f4c62064b74619!2sc%2C+871+E+Lambert+Rd%2C+La+Habra%2C+CA+90631!5e0!3m2!1sen!2sus!4v1468125888733" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'user', 
+        userId: '219102734',
+        accessToken: 'b7991e0298e64ca5917b072e1014d059'
+    });
+    feed.run();
+</script>

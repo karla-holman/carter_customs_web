@@ -1,0 +1,406 @@
+/*********** CUSTOM CSS ***************/
+// Overall formatting
+body {
+	color: #fff;
+	background-color: #000;
+}
+
+/********** DIV SECTIONS *************/
+
+.hero {
+	width: 100%;
+	background-size: cover;
+	height: 100vh;
+	min-height: 500px;
+	position: relative;
+	// margin-top: -150px;
+	background-attachment: fixed;
+   background-position: top left;
+   text-align: center; 
+   padding-top: 10%;
+}
+.page-hero {
+	width: 100%;
+	background-size: cover;
+	min-height: 200px;
+	position: relative;
+	// margin-top: -150px;
+	background-attachment: fixed;
+   background-position: bottom left;
+   text-align: center;
+}
+.project-hero {
+	width: 100%;
+	background-size: cover;
+	min-height: 200px;
+	position: relative;
+	// margin-top: -150px;
+	background-attachment: fixed;
+   background-position: bottom;
+   text-align: center; 
+   padding-top: 10%;
+   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}
+
+.dark-blue {
+	background-color: #0d283b;
+	position: relative;
+}
+
+.contact {
+	width: 100%;
+	background-size: cover;
+	min-height: 500px;
+	position: relative;
+	// margin-top: -150px;
+	background-attachment: fixed;
+   background-position: top; 
+
+   input {
+   	margin-top: 15px;
+   	width: 49%;
+   	float: left;
+   	margin-right: 1%;
+   }
+
+   input:nth-child(2n) {
+   	float: right;
+   	margin-right: 0;
+   }
+
+   textarea {
+   	margin-top: 15px;
+   }
+
+   iframe {
+   	width: 100%;
+   	height: 200px;
+   }
+
+   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  		color: $gray;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+	  color: $gray;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+	  color: $gray;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	  color: $gray;
+	}
+}
+
+.instagram {
+	position: relative;
+	display: block;
+	// min-height: 600px;
+
+	.post {
+		box-shadow: inset 0 0 5em 1em #000;
+		margin: 0;
+		float: left;
+		width: 25%;
+		position: relative;
+		background-position: center;
+		background-size: 110%;
+		// min-height: 300px;
+		transition: 1s;
+	}
+	.post:hover {
+		background-size: 100%;
+		transition: 1s;
+	}
+	img {
+		position: relative;
+		visibility: hidden;
+		width: 100%;
+	}
+}
+
+#footer {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.footer {
+	background-color: #0d283b;
+}
+
+.social {
+	float: right;
+	margin-left: 20px;
+}
+
+/********** NAVIGATION *************/
+
+.navbar {
+	text-transform: uppercase;
+	margin-top: 50px;
+
+	transition: 1s;
+}
+.navbar-brand {
+	font-family: Rye, serif;
+	font-size: 1.5em;
+	color: #fff;
+}
+
+.navbar-collapse.collapse.in {
+	background-color: #0d283b;
+}
+
+/********** TYPOGRAPHY *************/
+
+.hero, .project-hero {
+	h3 {
+		color: $brand-primary;
+		font-family: $font-family-sans-serif;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 1.5em;
+		line-height: 2.0em;
+	}
+
+	.btn {
+		margin-top: 30px;
+	}
+}
+
+h4 {
+	color: $brand-primary;
+	font-family: $font-family-sans-serif;
+}
+
+// Wheel type
+h5 {
+	font-variant: small-caps;
+	font-family: $font-family-serif;
+	color: #fff;
+	text-align: center;
+	margin: 0 auto;
+	position: absolute;
+	top: 80px;
+	left: 0;
+	right: 0;
+}
+
+h5.double {
+	top: 70px;
+}
+
+// Wheel type
+.project-header {
+	color: $brand-primary;
+	font-family: $font-family-sans-serif;
+	text-align: center;
+	margin: 0 auto;
+	position: absolute;
+	top: 30%;
+	left: 0;
+	right: 0;
+	font-size: 5em;
+	z-index: 300;
+	text-transform: uppercase;
+}
+
+p {
+	line-height: 1.75em;
+}
+
+.centered {
+	text-align: center;
+}
+
+/********** BOOTSTRAP COMPONENTS *************/
+
+.btn-default {
+	transition: background-color 1s;
+}
+.btn-default:hover {
+	background-color: rgba(52, 159, 235, 0.7);
+	transition: 1s;
+}
+
+.row {
+	margin-top: 90px;
+	margin-bottom: 100px;
+}
+
+.dark-blue .row {
+	margin-top: 110px;
+	margin-bottom: 40px;
+}
+
+.carousel {
+	img {
+		width: 100%;
+	}
+}
+
+/********** PAGE COMPONENTS *************/
+
+.blue-circle {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	position: absolute;
+	top: -90px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #0d283b;
+	z-index: 100;
+	padding: 20px;
+
+	img {
+		opacity: 0.1;
+		width: 100%;
+	}
+}
+
+.project-circle {
+	width: 80%;
+	border-radius: 50%;
+	position: absolute;
+	top: 100px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 100;
+
+	img {
+		opacity: 0.1;
+		width: 50%;
+	}
+}
+
+.service-img {
+	width: 100%;
+	margin: 0 0 20px 0;
+}
+
+.shop-img {
+	width: 100%;
+	margin: 0 0 20px 0;
+	background-color: rgba(253, 253, 253, 0.7);
+}
+
+.line-image-wide {
+	margin-left: 30%;
+	margin-top: 10px;
+	width: 70%;
+}
+
+.project-thumbs {
+	width: 100%;
+	margin: 0 0 20px 0;
+	background-color: rgba(253, 253, 253, 0.7);
+}
+
+.project-slideshow {
+	.carousel { overflow: hidden; }
+}
+
+/************ MEDIA QUERIES **********/
+
+// Small Screens
+@media (max-width: $screen-md-min) {
+	ul.nav li a {
+		font-size: 0.8em;
+	}
+
+	.navbar-brand {
+		font-size: 0.8em;
+		margin-top: -1px;
+	}
+	.row {
+		margin-top: 50px;
+		margin-bottom: 20px;
+	}
+	.dark-blue .row {
+		margin-top: 110px;
+		margin-bottom: 40px;
+	}
+	div[class^="col-"] {
+		margin-bottom: 50px;
+	}
+	.footer {
+		div[class^="col-"] {
+			margin-bottom: 20px;
+		}
+	}
+	.line-image-wide {
+		display: none;
+	}
+
+	.hero {
+		background-attachment: scroll;
+	}
+	.contact {
+		background-attachment: scroll;
+	}
+	.instagram {
+		// min-height: 800px;
+		.post {
+			width: 50%;
+		}
+	}
+	.project-header {
+		font-size: 3em;
+		top: 30%;
+	}
+}
+
+// Extra Small Screens
+@media (max-width: $screen-sm-min) {
+	ul.nav li a {
+		font-size: 1em;
+	}
+
+	.navbar-brand {
+		font-size: 1.0em;
+		margin-top: 2px;
+	}
+	.instagram {
+		.post {
+			width: 50%;
+		}
+	}
+	.footer {
+		text-align: center;
+		div[class^="col-"] {
+			margin-bottom: 20px;
+		}
+	}
+	.social-icons {
+		margin-left: auto;
+		margin-right: auto;
+		// width: 250px;
+	}
+	.social {
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
+	}
+
+	.mobile-center {
+		text-align: center;
+	}
+	.project-header {
+		font-size: 2em;
+	}
+}
+
+// Extra Extra Small Screens
+@media (max-width: $screen-xs-min) {
+	.instagram {
+		.post {
+			width: 100%;
+		}
+	}
+}
