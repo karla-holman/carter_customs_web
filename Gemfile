@@ -28,7 +28,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'devise-async'
 gem 'faker'
-gem 'fabrication'
 gem 'font-awesome-rails'
 gem 'mail_form'
 gem 'paperclip'
@@ -47,6 +46,8 @@ gem 'simple_form'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails'
+  gem 'fabrication'
 end
 
 group :development do
@@ -57,3 +58,11 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'shoulda-matchers', require: false
+  gem 'capybara-webkit'
+  gem 'webmock'
+  gem 'webmock-rspec-helper'
+end
