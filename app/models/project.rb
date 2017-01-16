@@ -1,21 +1,21 @@
 class Project < ActiveRecord::Base
 	has_many :images
+	has_attached_file :main_image,
+		styles: {
+			thumb: '125x75>',
+			medium: '1250x750>',
+			large: '2500x1500>'
+		}
 
 	validates :name, presence: true, uniqueness: true
 
-	scope :current, ->{ where("complete_date IS ?", nil) || where("complete_date > ?", Date.today) }
-	scope :past, ->{ where("complete_date <= ?", Date.today) }
+	scope :current, -> { where("complete_date IS ?", nil) || where("complete_date > ?", Date.today) }
+	scope :past, -> { where("complete_date <= ?", Date.today) }
 
-	has_attached_file :main_image, styles: { 
-		large: "2000x1600",
-		medium: "300x300>", 
-		thumb: "100x100>" 
-	}, 
-	default_url: "/images/:style/missing.png",
-	:storage => :s3,
-   :bucket => 'carter-customs'
-
-  	validates_attachment_content_type :main_image, content_type: /\Aimage\/.*\Z/
+	validates_attachment :main_image,
+		presence: true,
+		content_type: { content_type: %w(image/jpeg image/jpg image/png image/gif) },
+		size: { in: 0..2.megabytes }
 
 	def complete?
 		complete_date.present?

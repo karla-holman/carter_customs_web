@@ -33,6 +33,8 @@ gem 'mail_form'
 gem 'paperclip'
 # Simpleform
 gem 'simple_form'
+gem 'aws-sdk', '~> 2'
+gem 'aws-sdk-core'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -48,6 +50,12 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'fabrication'
+  gem 'launchy'
+  gem 'quiet_assets'
+  gem 'rb-fchange', require: false
+  gem 'rb-fsevent', require: false
+  gem 'rb-inotify', require: false
+  gem 'timecop'
 end
 
 group :development do
@@ -61,8 +69,9 @@ end
 group :test do
   gem 'capybara'
   gem 'capybara-screenshot'
-  gem 'shoulda-matchers', require: false
+  gem 'shoulda-matchers', '~> 3.1'
   gem 'capybara-webkit'
+  gem 'simplecov', require: false
   gem 'webmock'
   gem 'webmock-rspec-helper'
 end

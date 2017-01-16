@@ -31,25 +31,29 @@ ActiveRecord::Schema.define(version: 20161223174514) do
   add_index "images", ["project_id"], name: "index_images_on_project_id", using: :btree
 
   create_table "products", force: :cascade do |t|
-    t.string   "title",                               null: false
-    t.string   "slug",                                null: false
+    t.string   "title",                                   null: false
+    t.string   "slug",                                    null: false
     t.text     "description"
-    t.integer  "user_id",                             null: false
-    t.boolean  "is_featured",         default: false, null: false
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "images_file_name"
-    t.string   "images_content_type"
-    t.integer  "images_file_size"
-    t.datetime "images_updated_at"
+    t.integer  "user_id",                                 null: false
+    t.boolean  "is_featured",             default: false, null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+    t.string   "main_image_file_name"
+    t.string   "main_image_content_type"
+    t.integer  "main_image_file_size"
+    t.datetime "main_image_updated_at"
   end
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.date     "complete_date"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "main_image_file_name"
+    t.string   "main_image_content_type"
+    t.integer  "main_image_file_size"
+    t.datetime "main_image_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

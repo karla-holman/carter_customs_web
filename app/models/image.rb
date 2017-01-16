@@ -1,14 +1,17 @@
 class Image < ActiveRecord::Base
 	belongs_to :project
 
-	has_attached_file :image_attach, styles: { 
-		large: "2000x1600",
-		medium: "300x300>", 
-		thumb: "100x100>" 
-	}, 
-	default_url: "/images/:style/missing.png",
-	:storage => :s3,
-   :bucket => 'carter-customs'
+	has_attached_file :image_attach,
+		styles: {
+			thumb: '125x75>',
+			medium: '1250x750>',
+			large: '2500x1500>'
+		}
 
-  	validates_attachment_content_type :image_attach, content_type: /\Aimage\/.*\Z/
+	validates :name, presence: true
+
+	validates_attachment :image_attach,
+		presence: true,
+		content_type: { content_type: %w(image/jpeg image/jpg image/png image/gif) },
+		size: { in: 0..2.megabytes }
 end

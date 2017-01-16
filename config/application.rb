@@ -23,5 +23,24 @@ module CarterCustomsWeb
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.paperclip_default = {
+      s3_credentials: {
+        bucket: 'carter-customs',
+        access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+        secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
+      },
+      storage: :s3,
+      s3_headers: { 'Cache-Control' => 'max-age=31557600' },
+      s3_protocol: 'https',
+      bucket: 'carter-customs',
+      url: ':s3_domain_url',
+      s3_host_name: 's3-us-west-2.amazonaws.com',
+      s3_region: 'us-west-2',
+
+      path: '/:class/:id/:style/:basename.:extension',
+      default_url: '/images/:style/missing.png',
+      default_style: 'medium'
+    }
   end
 end

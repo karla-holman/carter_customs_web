@@ -6,5 +6,7 @@ class CreateProjects < ActiveRecord::Migration
     	t.date :complete_date
       t.timestamps null: false
     end
+
+    add_attachment :projects, :main_image
   end
 end

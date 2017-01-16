@@ -11,6 +11,6 @@ class CreateProducts < ActiveRecord::Migration
     	t.timestamps null: false
     end
 
-    add_attachment :products, :images
+    add_attachment :products, :main_image
   end
 end
