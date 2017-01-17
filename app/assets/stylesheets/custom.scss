@@ -16,7 +16,7 @@ body {
 	// margin-top: -150px;
 	background-attachment: fixed;
    background-position: top left;
-   text-align: center; 
+   text-align: center;
    padding-top: 10%;
 }
 .page-hero {
@@ -37,7 +37,7 @@ body {
 	// margin-top: -150px;
 	background-attachment: fixed;
    background-position: bottom;
-   text-align: center; 
+   text-align: center;
    padding-top: 10%;
    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
 }
@@ -54,7 +54,7 @@ body {
 	position: relative;
 	// margin-top: -150px;
 	background-attachment: fixed;
-   background-position: top; 
+   background-position: top;
 
    input {
    	margin-top: 15px;
@@ -132,6 +132,18 @@ body {
 	margin-left: 20px;
 }
 
+.alert {
+	position: absolute;
+	top: 150px;
+	z-index: 200;
+	width: 100%;
+	margin-bottom: 0;
+	background-color: $brand-primary;
+	.row {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
 /********** NAVIGATION *************/
 
 .navbar {
@@ -238,6 +250,10 @@ p {
 	img {
 		width: 100%;
 	}
+}
+
+.panel {
+	background-color: transparent;
 }
 
 /********** PAGE COMPONENTS *************/

@@ -36,6 +36,11 @@ gem 'simple_form'
 gem 'aws-sdk', '~> 2'
 gem 'aws-sdk-core'
 
+# e-commerce and admin
+gem 'rails_admin', '~> 1.0'
+gem 'cancancan', '~> 1.10'
+gem 'paper_trail'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -16,7 +16,14 @@
 //= require turbolinks
 //= require_tree .
 
-var rotation = 0, 
+$(document).on('turbolinks:load', function() {
+  setTimeout(function() {
+    console.log('fading out');
+    $('.alert').fadeOut('slow');
+  }, 10000); // <-- time in milliseconds
+});
+
+var rotation = 0,
     scrollLoc = $(window).scrollTop();
 
 $(window).scroll(function(){

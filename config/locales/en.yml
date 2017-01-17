@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+
+  flash:
+    errors:
+      access_denied: 'You do not have permission to view that page.'
+      access_denied_login: 'Please log in to continue.'
