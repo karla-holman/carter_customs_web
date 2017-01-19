@@ -15,6 +15,6 @@ class Service < ActiveRecord::Base
   scope :enabled, ->{ where(enabled: true) }
 
   def only_three_enabled
-    errors.add(:enabled, I18n.t('services.errors.enabled')) if Service.where(enabled: true).count > 3
+    errors.add(:enabled, I18n.t('services.errors.enabled')) if Service.where.not(id: self.id).enabled.count >= 3
   end
 end

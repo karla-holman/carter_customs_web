@@ -26,3 +26,11 @@ en:
     errors:
       access_denied: 'You do not have permission to view that page.'
       access_denied_login: 'Please log in to continue.'
+
+  services:
+    errors:
+      enabled: 'Only 3 services may be enabled at a time. Please disable another service before proceeding.'
+
+  small_galleries:
+    errors:
+      enabled: 'Only 8 small gallery images may be enabled at a time. Please disable another small gallery image before proceeding.'

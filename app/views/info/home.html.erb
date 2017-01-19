@@ -35,30 +35,11 @@
 <!-- Instagram Feed -->
 <a id="gallery"></a>
 <div class="instagram">
-  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta1.jpg') %>)">
-    <%= image_tag "instagram/Insta1.jpg" %>
-  </div>
-  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta2.jpg') %>)">
-    <%= image_tag "instagram/Insta1.jpg" %>
-  </div>
-  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta3.jpg') %>)">
-    <%= image_tag "instagram/Insta1.jpg" %>
-  </div>
-  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta4.jpg') %>)">
-    <%= image_tag "instagram/Insta1.jpg" %>
-  </div>
-  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta5.jpg') %>)">
-    <%= image_tag "instagram/Insta1.jpg" %>
-  </div>
-  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta6.jpg') %>)">
-    <%= image_tag "instagram/Insta1.jpg" %>
-  </div>
-  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta7.jpg') %>)">
-    <%= image_tag "instagram/Insta1.jpg" %>
-  </div>
-  <div class="post" style="background-image: url(<%= asset_path('instagram/Insta8.jpg') %>)">
-    <%= image_tag "instagram/Insta1.jpg" %>
-  </div>
+  <% SmallGallery.enabled.each do |image| %>
+    <div class="post" id="small-gallery-<% image.id %>" style="background-image: url(<%= asset_path(image.main_image.url(:medium)) %>)">
+      <%= image_tag image.main_image.url(:medium) %>
+    </div>
+  <% end %>
   <div class="clearfix"></div>
 </div>
 
