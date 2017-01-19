@@ -56,6 +56,7 @@ RSpec.configure do |config|
   config.include Devise::TestHelpers, type: :controller
   config.include Warden::Test::Helpers
   config.include Paperclip::Shoulda::Matchers
+  config.include Capybara::DSL
 
   config.before(:each) do
     allow_any_instance_of(Paperclip::Attachment).to receive(:save).and_return(true)

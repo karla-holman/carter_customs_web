@@ -71,21 +71,13 @@
   </div>
   <div class="container">
     <div class="row centered">
-      <div class="col-md-4">
-        <%= image_tag "services/ink.png", alt: "Custom Ink", class: "service-img" %>
-        <h4>Custom Paint</h4>
-        <p>We use various techniques such as airbrushing, pinstriping, and graphics to create the perfect work of art just for you.</p>
-      </div>
-      <div class="col-md-4">
-        <%= image_tag "services/stuff.png", alt: "Tools", class: "service-img" %>
-        <h4>Mechanical Work</h4>
-        <p>Need repair, restoration, or installation? We can do it all to get your ride up and running like new, probably even better.</p>
-      </div>
-      <div class="col-md-4">
-        <%= image_tag "services/welding.png", alt: "Mechanical", class: "service-img" %>
-        <h4>Fabrication</h4>
-        <p>For those tough projects we can build the custom motorcycle components you need to get the job done.</p>
-      </div>
+      <% Service.enabled.each do |service| %>
+        <div class="col-md-4">
+          <%= image_tag service.main_image.url(:medium), alt: "Custom Ink", class: "service-img" %>
+          <h4><%= service.header %></h4>
+          <p><%= service.body %></p>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
