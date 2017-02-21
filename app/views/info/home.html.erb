@@ -37,7 +37,7 @@
 <div class="instagram">
   <% SmallGallery.enabled.each do |image| %>
     <div class="post" id="small-gallery-<% image.id %>" style="background-image: url(<%= asset_path(image.main_image.url(:medium)) %>)">
-      <%= image_tag image.main_image.url(:medium) %>
+      <%= image_tag 'instagram/Insta1.jpg' %>
     </div>
   <% end %>
   <div class="clearfix"></div>
@@ -190,7 +190,7 @@
 </div>
 
 <!-- Contact -->
-<a href="contact"></a>
+<a id="contact"></a>
 <div class="contact" style="background-image: url(<%= asset_path('backgrounds/shop.jpg') %>)">
   <div class="container">
     <div class="row">
