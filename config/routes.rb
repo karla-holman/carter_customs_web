@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get 'home' => 'info#home'
   post 'contact' => 'info#contact'
 
-  resources :projects, only: [:index, :show]
+  resources :projects, only: [:show]
   # Example resource route with options:
   #   resources :products do
   #     member do

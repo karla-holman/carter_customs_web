@@ -152,38 +152,27 @@
   </div>
 </div>
 
-<!-- Store -->
-<a id="store"></a>
+<!-- Projects -->
+<a id="projects"></a>
 <div class="dark-blue">
   <div class="blue-circle wheel">
-    <h5>Store</h5>
+    <h5>Projects</h5>
     <%= image_tag "line_art/wheel.png" %>
   </div>
-  <div class="container">
+
+  <div class="container projects">
     <div class="row centered">
-      <div class="col-md-4">
-        <h4>Carter Custom Swag</h4>
-        <p>Grab a ball cap or a shot glass, something to remember your time with us.</p>
-        <%= image_tag "line_art/lines.png", class: "line-image-wide" %>
-      </div>
-      <% if @products.empty? %>
-        <div class="col-md-8">
-          <p>No Products available for sale</p>
-        </div>
-      <% else %>
-        <% @products.each do |product| %>
-          <div class="col-xs-6 col-sm-4 col-md-2">
-            <%= link_to spree.product_path(product) do %>
-              <% if !product.images.empty? %>
-                <%= image_tag product.images.first.attachment.url(:product), class: "shop-img" %>
-              <% else %>
-                <%= image_tag "no-image.jpg", class: "shop-img" %>
-              <% end %>
-            <% end %>
-            <p style="font-weight: 700; line-height: 1.2em"><%= link_to spree.product_path(product) do %><%= product.name %><% end %></p>
-            <p><%= number_to_currency(product.price) %></p>
+      <% @projects.each do |project| %>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <%= image_tag project.main_image.url(:medium), alt: project.name %>
+            <div class="caption">
+              <h4><%= project.name %></h4>
+              <p><%= project.short_description %></p>
+              <p><%= link_to project_path(project), class: 'btn btn-primary', role: 'button' do %>View<% end %><%= link_to '#', class: 'btn btn-default', role: 'button' do %>Share<% end %></p>
+            </div>
           </div>
-        <% end %>
+        </div>
       <% end %>
     </div>
   </div>

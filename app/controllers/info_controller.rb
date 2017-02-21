@@ -3,6 +3,7 @@ class InfoController < ApplicationController
 		# For web contact
 		@contact = Contact.new
     @products = Product.all
+		@projects = Project.all.order(complete_date: :desc)
 	end
 
 	# POST Contact
