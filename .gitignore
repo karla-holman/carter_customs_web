@@ -31,3 +31,6 @@ public/test
 
 # Ignore passwords
 /config/passwords.rb
+
+# Ignore application configuration
+/config/application.yml

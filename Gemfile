@@ -33,8 +33,10 @@ gem 'mail_form'
 gem 'paperclip'
 # Simpleform
 gem 'simple_form'
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '~> 2.3.0'
 gem 'aws-sdk-core'
+
+gem 'figaro'
 
 # e-commerce and admin
 gem 'rails_admin', '~> 1.0'
