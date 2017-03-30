@@ -20,7 +20,6 @@
 
 # Ignore any development uploads
 /public/uploads
-/public/assets
 
 .DS_Store
 public/system
