@@ -33,6 +33,8 @@ gem 'mail_form'
 gem 'paperclip'
 # Simpleform
 gem 'simple_form'
+gem 'sidekiq'
+gem 'redis', '~>3.2'
 gem 'aws-sdk', '~> 2.3.0'
 gem 'aws-sdk-core'
 
