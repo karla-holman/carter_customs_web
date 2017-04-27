@@ -1,4 +1,5 @@
 <!-- Header hero image -->
+<% title 'Motorcycle Paint, Fabrication and Repair | La Habra, CA' %>
 <div class="hero" style="background-image: url(<%= asset_path('welding.jpg') %>);" >
   <div class="container">
     <div class="row">
@@ -168,7 +169,7 @@
             <%= image_tag project.main_image.url(:medium), alt: project.name %>
             <div class="caption">
               <h4><%= project.name %></h4>
-              <p><%= project.short_description %></p>
+              <p class="description"><%= project.short_description %></p>
               <p><%= link_to project_path(project), class: 'btn btn-primary', role: 'button' do %>View<% end %></p>
             </div>
           </div>
